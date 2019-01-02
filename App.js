@@ -7,6 +7,6 @@
  */
 
 
-import FirstScreen2 from "./version1/FirstScreen2";
-export default FirstScreen2;
+import FirstScreen3 from "./version2/FirstScreen3";
+export default FirstScreen3;
 

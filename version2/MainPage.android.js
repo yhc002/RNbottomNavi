@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { View, StyleSheet} from 'react-native';
 import BottomNavigation, {
     IconTab,
@@ -12,7 +12,7 @@ import Icon4Event from "../Scenes/Icon4Event";
 
 //import Icon from '@expo/vector-icons/MaterialCommunityIcons'
 
-export default class App extends React.Component {
+export default class MainPage extends Component {
     state = {
         activeTab: 'games'
     }
@@ -74,12 +74,14 @@ export default class App extends React.Component {
         />
     )
 
+
+
     renderScene(key) {
         switch (key) {
             case 'games': return (<Icon1Event/>); break;
             case 'movies-tv': return (<Icon2Event/>); break;
             case 'music': return (<Icon3Event/>); break;
-            case 'books': return (<Icon4Event onLogoutPressDirect={() => this.props.onLogoutPress}/>); break;
+            case 'books': return (<Icon4Event onLogoutPressDirect={() => this.props.onLogoutPress()}/>); break;
             default: console.warn("error or not implemented");
         }
 
