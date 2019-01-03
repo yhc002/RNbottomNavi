@@ -9,7 +9,7 @@ import Icon1Event from "../Scenes/Icon1Event";
 import Icon2Event from "../Scenes/Icon2Event";
 import Icon3Event from "../Scenes/Icon3Event";
 import Icon4Event from "../Scenes/Icon4Event";
-
+import Icon5Event from "../Scenes/Icon5Event"
 //import Icon from '@expo/vector-icons/MaterialCommunityIcons'
 
 export default class MainPage extends Component {
@@ -81,7 +81,8 @@ export default class MainPage extends Component {
             case 'games': return (<Icon1Event/>); break;
             case 'movies-tv': return (<Icon2Event/>); break;
             case 'music': return (<Icon3Event/>); break;
-            case 'books': return (<Icon4Event onLogoutPressDirect={() => this.props.onLogoutPress()}/>); break;
+            case 'books': return (<Icon4Event />); break;
+            case 'bonus': return (<Icon5Event onLogoutPressDirect={() => this.props.onLogoutPress()}/>); break;
             default: console.warn("error or not implemented");
         }
 

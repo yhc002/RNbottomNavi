@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Login from './Login';
+import Authentication from './authentication';
 import MainPage from "./MainPage"
 
 export default class App extends Component {
@@ -16,7 +16,7 @@ export default class App extends Component {
                 onLogoutPress={() => this.setState({isLoggedIn: false})}
             />;
         else
-            return <Login
+            return <Authentication
                 onLoginPress={() => this.setState({isLoggedIn: true})}
             />;
     }
