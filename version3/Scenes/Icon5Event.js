@@ -6,17 +6,17 @@ import {
     Button
 } from 'react-native';
 
-export default class Secured extends Component {
+export default class Icon5Event extends Component {
     render() {
         return (
             <ScrollView style={{padding: 20}}>
                 <Text
                     style={{fontSize: 27}}>
-                    Welcome
+                    Settings
                 </Text>
                 <View style={{margin:20}} />
                 <Button
-                    onPress={this.props.onLogoutPress}
+                    onPress={this.props.onLogoutPressDirect}
                     title="Logout"
                 />
             </ScrollView>

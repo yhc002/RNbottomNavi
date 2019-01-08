@@ -1,9 +1,10 @@
-import {Button, View, Text} from "react-native";
+import {Button, View, Text,Image} from "react-native";
 import React from "react";
 
 function Icon1Event() {
     return(
         <View>
+            <Image source={require('../../DropLogo.png')}/>
             <Text
                 style={{fontSize: 27}}>
                 Home
