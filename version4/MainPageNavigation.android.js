@@ -16,13 +16,18 @@ import Icon5Event from "./Scenes/Icon5Event"
 import {createAppContainer,createBottomTabNavigator,createStackNavigator} from "react-navigation";
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 
+const icons = [
+  <Icon size={20} color="black" name={'add-box'} />,
+  <Icon size={20} color="black" name={'add-circle'} />,
+  <Icon size={20} color="black" name={'add'} />
+]
 
 let Navigator =  createMaterialBottomTabNavigator({
-        Home: { screen: Icon1Event},
-        Order: { screen: Icon2Event },
-        Bonus: { screen: Icon3Event},
-        MyPage: { screen: Icon4Event},
-        Settings: { screen: Icon5Event},
+        Home: { screen: Icon1Event, navigationOptions:{tabBarColor:"#388E3C", tabBarIcon:icons[0]}},
+        Order: { screen: Icon2Event, navigationOptions:{tabBarColor:"#01794C", tabBarIcon:icons[1]}},
+        Bonus: { screen: Icon3Event, navigationOptions:{tabBarColor:"#6A1B9A", tabBarIcon:icons[2]}},
+        MyPage: { screen: Icon4Event, navigationOptions:{tabBarColor:"#1565C0", tabBarIcon:icons[0]}},
+        Settings: { screen: Icon5Event, navigationOptions:{tabBarColor:"#1C0", tabBarIcon:icons[1]}},
     }
 );
 

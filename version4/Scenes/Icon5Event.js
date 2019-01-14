@@ -16,7 +16,7 @@ export default class Icon5Event extends Component {
                 </Text>
                 <View style={{margin:20}} />
                 <Button
-                    onPress={()=>parent.props.navigation.goBack()}
+                    onPress={()=>this.props.navigation.dangerouslyGetParent().navigate("Login")}
                     title="Logout"
                 />
             </ScrollView>
