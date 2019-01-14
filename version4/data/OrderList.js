@@ -19,6 +19,7 @@ class OrderList {
       );
     });
   }
+
   setFromObject(ob){
     this.name = ob.name;
     this.orders = ob.orders;

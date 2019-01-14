@@ -31,7 +31,7 @@ export default class Icon4Event extends Component {
                     주문 내역
                 </Text>
                 {this._showList()}
-                <View style={{margin:20}} />
+                <View style={{margin:5}} />
             </ScrollView>
         )
     }

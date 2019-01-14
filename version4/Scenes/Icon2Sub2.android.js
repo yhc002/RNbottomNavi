@@ -4,7 +4,6 @@ import {
   Text,
   View,
   Button,
-  TextInput,
   DatePickerAndroid,
   TimePickerAndroid,
   TouchableOpacity
@@ -13,7 +12,7 @@ import {
 export default class Icon2Sub2 extends Component {
   constructor(props){
     super(props);
-    this.renderDatePicker.bind(this)
+    this.renderDatePicker.bind(this);
     this.renderTimePicker.bind(this);
   }
   state = {
@@ -22,11 +21,17 @@ export default class Icon2Sub2 extends Component {
     receiveDate:new Date(),
     sendTime:new Date(),
     receiveTime:new Date()
-  }
+  };
 
-  _onSubmit=()=>{
-    //this.props.orderList.push({name: this.state.name, destination: this.state.destination})
-    this.props.navigation.navigate("Phase3")
+  _onSubmit=()=>{ //제출하고 다음 넘어갈 때
+    let currentOrder=this.props.navigation.getParam('currentOrder');
+    currentOrder['sendDate']=new Date(
+      this.state.sendDate.getFullYear(),this.state.sendDate.getMonth(),this.state.sendDate.getDay(),
+      this.state.sendTime.getHours(),this.state.sendTime.getMinutes());
+    currentOrder['receiveDate']=new Date(
+      this.state.receiveDate.getFullYear(),this.state.receiveDate.getMonth(),this.state.receiveDate.getDay(),
+      this.state.receiveTime.getHours(),this.state.receiveTime.getMinutes());
+    this.props.navigation.navigate("Phase3",{currentOrder: currentOrder});
   }
 
   async renderDatePicker(isSend){ //날짜 선택. isSend(bool)값 기준으로 맡길/찾을 판단
